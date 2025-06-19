@@ -7,32 +7,29 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-b from-pink-100 to-white min-h-screen relative">
-
-  <!-- Main Layout -->
+<body class="bg-gradient-to-b from-pink-100 to-white min-h-screen">
   <div class="flex">
-
     <!-- Sidebar -->
     <div class="w-16 md:w-1/6 bg-cyan-100 min-h-screen p-4 space-y-6 flex flex-col items-center md:items-start">
       <img src="Study_with_Me-removebg-preview.png" class="w-20 md:w-32 mb-2 md:mb-4" alt="Logo">
       <nav class="space-y-4 w-full">
-        <a href="#" class="flex items-center gap-2 p-2 bg-cyan-300 rounded-md text-gray-800">
+        <a href="home.html" class="flex items-center gap-2 p-2 bg-cyan-300 rounded-md text-gray-800">
           <span class="material-icons">home</span>
           <span class="hidden md:inline">Home</span>
         </a>
-        <a href="#" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+        <a href="profile.html" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
           <span class="material-icons">dashboard</span>
           <span class="hidden md:inline">Dashboard</span>
         </a>
-        <a href="#" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+        <a href="task.html" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
           <span class="material-icons">assignment</span>
           <span class="hidden md:inline">Tasks</span>
         </a>
-        <a href="#" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+        <a href="group.html" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
           <span class="material-icons">group</span>
           <span class="hidden md:inline">Groups</span>
         </a>
-        <a href="#" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+        <a href="msg.html" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
           <span class="material-icons">chat</span>
           <span class="hidden md:inline">Message</span>
         </a>
@@ -40,21 +37,44 @@
     </div>
 
     <!-- Main Content -->
-    <div class="flex-1 p-6 relative z-0">
+    <div class="flex-1 p-6">
       <!-- Top Bar -->
       <div class="flex justify-between items-center mb-6">
         <h1 class="text-3xl font-bold text-indigo-900">STAY ON TRACK , NOT ALONE</h1>
-        <div class="flex items-center gap-2">
-          <img src="profile.png" class="w-8 h-8 rounded-full" alt="User">
-          <span class="font-semibold">VIDHYA</span>
-          <span class="material-icons text-gray-600">arrow_drop_down</span>
+        <div class="relative">
+          <button id="profileButton" class="flex items-center gap-2 focus:outline-none">
+            <img src="clg gurl.jpg" class="w-8 h-8 rounded-full" alt="User">
+            <span class="font-semibold text-black">VIDHYA</span>
+            <span class="material-icons text-black">arrow_drop_down</span>
+          </button>
+          <div id="profileDropdown" class="absolute right-0 mt-2 w-56 bg-cyan-100 shadow-lg rounded-md py-2 hidden z-10">
+            <a href="profile.html" class="flex items-center px-4 py-2 text-gray-800 hover:bg-cyan-200">
+              <span class="material-icons mr-2">person</span> Profile
+            </a>
+            <a href="changepwd.html" class="flex items-center px-4 py-2 text-gray-800 hover:bg-cyan-200">
+              <span class="material-icons mr-2">lock</span> Change Password
+            </a>
+            <a href="notify.html" class="flex items-center px-4 py-2 text-gray-800 hover:bg-cyan-200">
+              <span class="material-icons mr-2">notifications</span> Notification Settings
+            </a>
+            <a href="delacc.html" class="flex items-center px-4 py-2 text-gray-800 hover:bg-cyan-200">
+              <span class="material-icons mr-2">delete</span> Delete Account
+            </a>
+            <a href="login.html" class="flex items-center px-4 py-2 text-gray-800 hover:bg-cyan-200">
+              <span class="material-icons mr-2">logout</span> Logout
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Buttons -->
       <div class="flex gap-4 mb-4">
-        <button class="bg-cyan-300 px-4 py-2 rounded-md font-medium">Create Your Room</button>
-        <button class="bg-cyan-300 px-4 py-2 rounded-md font-medium">Join Feature Rooms</button>
+        <a href="Create Your Room.html">
+          <button class="bg-cyan-300 px-4 py-2 rounded-md font-medium">Create Your Room</button>
+        </a>
+        <a href="Join Feature Rooms.html">
+          <button class="bg-cyan-300 px-4 py-2 rounded-md font-medium">Join Feature Rooms</button>
+        </a>
       </div>
 
       <!-- Search Filters -->
@@ -67,38 +87,48 @@
 
       <!-- Cards Section -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <a href="room.html" class="text-center block">
-          <div class="bg-cyan-100 h-40 flex items-center justify-center text-4xl rounded-md hover:bg-cyan-200 transition">
-            +
-          </div>
+        <a href="Create Room.html" class="text-center">
+          <div class="bg-cyan-100 h-40 flex items-center justify-center text-4xl rounded-md">+</div>
           <p class="mt-2 font-semibold">Create Room</p>
         </a>
-        <a href="with friends.html" class="block">
-          <div class="text-center cursor-pointer">
-            <img src="conference-call.png" class="h-40 w-full object-cover rounded-md" />
-            <p class="mt-2 font-semibold">Study with Friends</p>
-          </div>
+        <a href="Study with Friends.html" class="text-center">
+          <img src="conference-call.png" class="h-40 w-full object-cover rounded-md" />
+          <p class="mt-2 font-semibold">Study with Friends</p>
         </a>
-        <a href="shared with u.html" class="block">
-          <div class="text-center cursor-pointer">
-            <img src="shared resource.png" class="h-40 w-full object-cover rounded-md" />
-            <p class="mt-2 font-semibold">Share Resources</p>
-          </div>
+        <a href="Resources.html" class="text-center">
+          <img src="resources.png" class="h-40 w-full object-cover rounded-md" />
+          <p class="mt-2 font-semibold">Share Resources</p>
         </a>
-        <div class="text-center">
-          <img src="CreatingAWhiteboardZoom.mp4.mp4b86c.jpg" class="h-40 w-full object-cover rounded-md" />
+        <a href="whiteboard.html" class="text-center">
+          <img src="dashboard.jpg" class="h-40 w-full object-cover rounded-md" />
           <p class="mt-2 font-semibold">Start Whiteboard</p>
-        </div>
-        <a href="Pomodoro.html">
-        <div class="text-center cursor-pointer">
-          <img src="timer.jpg" class="h-40 w-full object-cover rounded-md" />
-          <p class="mt-2 font-semibold">Launch Focus Timer</p>
-        </div>
         </a>
-        <div class="text-center">
+        <a href="Launch Focus Timer.html" class="text-center">
+          <img src="timerr.jpg" class="h-40 w-full object-cover rounded-md" />
+          <p class="mt-2 font-semibold">Launch Focus Timer</p>
+        </a>
+        <a href="Room History.html" class="text-center">
           <img src="room history.jpg" class="h-40 w-full object-cover rounded-md" />
           <p class="mt-2 font-semibold">Room History</p>
-        </div>
+        </a>
       </div>
     </div>
   </div>
+
+  <!-- JavaScript to toggle dropdown -->
+  <script>
+    const profileBtn = document.getElementById('profileButton');
+    const dropdown = document.getElementById('profileDropdown');
+
+    profileBtn.addEventListener('click', () => {
+      dropdown.classList.toggle('hidden');
+    });
+
+    window.addEventListener('click', (e) => {
+      if (!profileBtn.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Study With Me - Group Chats</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-pink-100 min-h-screen"><div class="flex">  <!-- Sidebar -->  <div class="w-16 md:w-1/6 bg-cyan-100 min-h-screen p-4 space-y-6 flex flex-col items-center md:items-start">
+    <img src="Study_with_Me-removebg-preview.png" class="w-20 md:w-32 mb-2 md:mb-4" alt="Logo">
+    <nav class="space-y-4 w-full">
+      <a href="home.html" class="flex items-center gap-2 p-2 hover:bg-cyan-200 rounded-md text-gray-800">
+        <span class="material-icons">home</span>
+        <span class="hidden md:inline">Home</span>
+      </a>
+      <a href="dashboard.html" class="flex items-center gap-2 p-2 hover:bg-cyan-200 rounded-md text-gray-800">
+        <span class="material-icons">dashboard</span>
+        <span class="hidden md:inline">Dashboard</span>
+      </a>
+      <a href="task.html" class="flex items-center gap-2 p-2 hover:bg-cyan-200 rounded-md text-gray-800">
+        <span class="material-icons">assignment</span>
+        <span class="hidden md:inline">Tasks</span>
+      </a>
+      <a href="group.html" class="flex items-center gap-2 p-2 bg-cyan-300 rounded-md text-gray-800">
+        <span class="material-icons">group</span>
+        <span class="hidden md:inline">Groups</span>
+      </a>
+      <a href="msg.html" class="flex items-center gap-2 p-2 hover:bg-cyan-200 rounded-md text-gray-800">
+        <span class="material-icons">chat</span>
+        <span class="hidden md:inline">Message</span>
+      </a>
+    </nav>
+  </div>  
+  <!-- Main Content -->
+     <div class="flex-1 p-4 space-y-9">
+        <!-- Top Bar -->
+<div class="flex justify-between items-center">
+  <div>
+    <p class="font-bold text-lg">Groups ➔ <span class="text-cyan-700">Study Notes 📜</span></p>
+  </div>
+  <div class="flex items-center gap-2 relative">
+    <input type="text" placeholder="Search app users..." class="px-3 py-1 border rounded-md" />
+    <span class="text-sm text-gray-600">Daily time left: <strong>2h 3m</strong></span>
+    <button class="bg-cyan-500 text-white px-2 py-1 rounded">Upgrade</button>
+   <a href="notify.html" title="Notifications">
+  <span class="material-icons text-blue-600 hover:text-blue-800">notifications</span>
+</a>
+<a href="group.html" title="Groups">
+  <span class="material-icons text-blue-600 hover:text-blue-800">group</span>
+</a>
+<a href="msg.html" title="Chat">
+  <span class="material-icons text-blue-600 hover:text-blue-800">chat</span>
+</a>
+    <div class="relative">
+      <button id="profileDropdownToggle" class="flex items-center gap-2 focus:outline-none">
+        <img src="clg gurl.jpg" class="w-8 h-8 rounded-full" alt="User">
+        <span class="font-semibold">VIDHYA</span>
+        <span class="material-icons">arrow_drop_down</span>
+      </button>
+      <div id="profileDropdown" class="absolute right-0 mt-2 w-56 bg-cyan-100 rounded-md shadow-md hidden z-50">
+        <a href="profile.html" class="flex items-center gap-2 px-4 py-2 hover:bg-cyan-200">
+          <span class="material-icons">person</span> Profile
+        </a>
+        <a href="changepwd.html" class="flex items-center gap-2 px-4 py-2 hover:bg-cyan-200">
+          <span class="material-icons">lock</span> Change Password
+        </a>
+        <a href="notify.html" class="flex items-center gap-2 px-4 py-2 hover:bg-cyan-200">
+          <span class="material-icons">notifications</span> Notification Settings
+        </a>
+        <a href="delacc.html" class="flex items-center gap-2 px-4 py-2 hover:bg-cyan-200">
+          <span class="material-icons">delete</span> Delete Account
+        </a>
+        <a href="login.html" class="flex items-center gap-2 px-4 py-2 hover:bg-cyan-200">
+          <span class="material-icons">logout</span> Logout
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Group Panel + Chat Panel -->
+<div class="flex">
+
+  <!-- Left: Group List -->
+  <div class="w-1/4 pr-4 space-y-2">
+    <h2 class="font-bold text-lg mb-2">My Groups ➕</h2>
+    <div class="space-y-2">
+      <button class="w-full text-left bg-cyan-200 px-4 py-2 rounded">GK Notes</button>
+      <button class="w-full text-left bg-cyan-500 px-4 py-2 rounded">Study Notes 📜</button>
+      <button class="w-full text-left bg-cyan-200 px-4 py-2 rounded">Sem Notes 📁</button>
+      <button class="w-full text-left bg-cyan-200 px-4 py-2 rounded">5am Club 🐽</button>
+      <button class="w-full text-left bg-cyan-200 px-4 py-2 rounded">NEET Notes 🖐</button>
+    </div>
+  </div>
+
+  <!-- Right: Chat Window -->
+  <div class="flex-1 bg-cyan-100 rounded-lg p-4 shadow-inner">
+    <h2 class="text-xl font-semibold mb-4 text-gray-800">Group Chats</h2>
+
+    <!-- Chat Messages -->
+    <div class="space-y-4 text-sm">
+      <div class="bg-white p-2 rounded shadow flex justify-between">
+        <p><strong>Maahi:</strong> Do we have study session after 1 pm?</p>
+        <span class="text-xs text-gray-500">3d • 2 Comments</span>
+      </div>
+      <div class="bg-white p-2 rounded shadow flex justify-between">
+        <p><strong>Aanya:</strong> Can you share the MOM of today?</p>
+        <span class="text-xs text-gray-500">5d • 3 Comments</span>
+      </div>
+      <div class="bg-white p-2 rounded shadow flex justify-between">
+        <p><strong>Diana:</strong> Did we have any new joinee in the study hour today?</p>
+        <span class="text-xs text-gray-500">6d • 0 Comments</span>
+      </div>
+      <div class="bg-white p-2 rounded shadow flex justify-between">
+        <p><strong>Virat:</strong> Hi, I'm the newbie!!!</p>
+        <span class="text-xs text-gray-500">1w • 7 Comments</span>
+      </div>
+      <div class="bg-white p-2 rounded shadow flex justify-between">
+        <p><strong>Prabha:</strong> @Maahi, yes, we are having one.</p>
+        <span class="text-xs text-gray-500">9d • 8 Comments</span>
+      </div>
+      <div class="bg-white p-2 rounded shadow flex justify-between">
+        <p><strong>Devansh:</strong> Anyone finished Unit 4 notes?</p>
+        <span class="text-xs text-gray-500">3w • 5 Comments</span>
+      </div>
+      <div class="bg-white p-2 rounded shadow flex justify-between">
+        <p><strong>Anthony:</strong> Still stuck at logic gates 🧠</p>
+        <span class="text-xs text-gray-500">3w • 4 Comments</span>
+      </div>
+      <div class="bg-white p-2 rounded shadow flex justify-between">
+        <p><strong>Kuldeep:</strong> I can upload the PDF in 5 mins.</p>
+        <span class="text-xs text-gray-500">3w • 1 Comment</span>
+      </div>
+      <div class="bg-white p-2 rounded shadow flex justify-between">
+        <p><strong>Samson:</strong> Can we finalize the UI flow?</p>
+        <span class="text-xs text-gray-500">5mo • 0 Comments</span>
+      </div>
+    </div>
+
+    <!-- Bottom Button -->
+    <div class="text-right mt-6">
+      <button onclick="window.location.href='home.html'" class="text-cyan-700 hover:underline text-sm">&larr; Left chat</button>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div><!-- Dropdown script --><script>
+  document.getElementById('profileDropdownToggle').addEventListener('click', () => {
+    document.getElementById('profileDropdown').classList.toggle('hidden');
+  });
+</script></body>
+</html>
