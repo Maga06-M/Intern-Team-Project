@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study With Me - Task</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-pink-100 to-white min-h-screen">
+  <div class="flex">
+
+    <!-- Sidebar -->
+    <div class="w-16 md:w-1/6 bg-cyan-100 min-h-screen p-4 space-y-6 flex flex-col items-center md:items-start">
+      <img src="Study_with_Me-removebg-preview.png" class="w-20 md:w-32 mb-2 md:mb-4" alt="Logo">
+      <nav class="space-y-4 w-full">
+        <a href="home.html" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+          <span class="material-icons">home</span>
+          <span class="hidden md:inline">Home</span>
+        </a>
+        <a href="profile.html" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+          <span class="material-icons">dashboard</span>
+          <span class="hidden md:inline">Dashboard</span>
+        </a>
+        <a href="task.html" class="flex items-center gap-2 p-2 bg-cyan-300 rounded-md text-gray-800">
+          <span class="material-icons">assignment</span>
+          <span class="hidden md:inline">Tasks</span>
+        </a>
+        <a href="group.html" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+          <span class="material-icons">group</span>
+          <span class="hidden md:inline">Groups</span>
+        </a>
+        <a href="msg.html" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+          <span class="material-icons">chat</span>
+          <span class="hidden md:inline">Message</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-6">
+
+      <!-- Top Bar -->
+      <div class="flex justify-between items-center mb-6">
+        <div class="flex items-center gap-2">
+          <input type="text" placeholder="Search here..." class="px-3 py-2 rounded-md border border-gray-300" />
+        </div>
+        <div class="relative">
+          <div id="profileDropdownToggle" class="flex items-center gap-2 cursor-pointer">
+            <img src="clg gurl.jpg" class="w-8 h-8 rounded-full" alt="User">
+            <span class="font-semibold">VIDHYA</span>
+            <span class="material-icons">arrow_drop_down</span>
+          </div>
+          <div id="profileDropdown" class="absolute right-0 mt-2 w-56 bg-cyan-100 rounded-md shadow-md hidden z-50">
+            <a href="profile.html" class="flex items-center gap-2 px-4 py-2 hover:bg-cyan-200">
+              <span class="material-icons">person</span> Profile
+            </a>
+            <a href="changepwd.html" class="flex items-center gap-2 px-4 py-2 hover:bg-cyan-200">
+              <span class="material-icons">lock</span> Change Password
+            </a>
+            <a href="notify.html" class="flex items-center gap-2 px-4 py-2 hover:bg-cyan-200">
+              <span class="material-icons">notifications</span> Notification Settings
+            </a>
+            <a href="delacc.html" class="flex items-center gap-2 px-4 py-2 hover:bg-cyan-200">
+              <span class="material-icons">delete</span> Delete Account
+            </a>
+            <a href="login.html" class="flex items-center gap-2 px-4 py-2 hover:bg-cyan-200">
+              <span class="material-icons">logout</span> Logout
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task Charts -->
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-cyan-100 p-4 rounded shadow">
+          <h3 class="font-semibold text-lg mb-2">Focus Time</h3>
+          <p class="mb-4">You have studied 5hrs 42mins this week</p>
+          <img src="graph.png" alt="Focus chart" class="w-full rounded">
+        </div>
+        <div class="bg-cyan-100 p-4 rounded shadow">
+          <h3 class="font-semibold text-lg mb-2">Study Points</h3>
+          <p class="mb-4">Daily Task Completion Calendar</p>
+          <img src="streaks.png" alt="Calendar chart" class="w-full rounded">
+          <p class="mt-2 font-semibold">Streak: 3 Streaks 🔥</p>
+        </div>
+      </div>
+
+      <!-- Metrics Cards -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-6">
+        <div class="bg-cyan-100 p-4 rounded shadow text-center">
+          <div class="text-3xl text-orange-500 mb-2">
+            <span class="material-icons">hourglass_empty</span>
+          </div>
+          <p class="font-semibold text-sm">Avg time/day</p>
+          <p class="text-lg font-bold">5.5hrs</p>
+        </div>
+        <div class="bg-cyan-100 p-4 rounded shadow text-center">
+          <div class="text-3xl text-green-500 mb-2">
+            <span class="material-icons">timelapse</span>
+          </div>
+          <p class="font-semibold text-sm">Longest Session</p>
+          <p class="text-lg font-bold">3hrs</p>
+        </div>
+        <div class="bg-cyan-100 p-4 rounded shadow text-center">
+          <div class="text-3xl text-purple-500 mb-2">
+            <span class="material-icons">free_breakfast</span>
+          </div>
+          <p class="font-semibold text-sm">Break time</p>
+          <p class="text-lg font-bold">2hr</p>
+        </div>
+        <div class="bg-cyan-100 p-4 rounded shadow text-center">
+          <div class="text-3xl text-blue-500 mb-2">
+            <span class="material-icons">event_available</span>
+          </div>
+          <p class="font-semibold text-sm">Session Attended</p>
+          <p class="text-lg font-bold">21</p>
+        </div>
+        <div class="bg-cyan-100 p-4 rounded shadow text-center">
+          <div class="text-3xl text-teal-500 mb-2">
+            <span class="material-icons">check_circle</span>
+          </div>
+          <p class="font-semibold text-sm">Task Completed</p>
+          <p class="text-lg font-bold">18</p>
+        </div>
+      </div>
+
+      <!-- Study Performance with more top margin -->
+      <div class="mt-10 bg-cyan-100 p-4 rounded shadow">
+        <h3 class="text-lg font-semibold mb-2">Study Performance</h3>
+        <p>This week (to this day)</p>
+        <div class="bg-cyan-200 h-4 rounded mb-2">
+          <div class="bg-cyan-500 h-4 w-[80%] rounded"></div>
+        </div>
+        <p>Last Week</p>
+        <div class="bg-cyan-200 h-4 rounded mb-2">
+          <div class="bg-cyan-500 h-4 w-[75%] rounded"></div>
+        </div>
+        <p>Best Ever Week (May 1st week 2024)</p>
+        <div class="bg-cyan-200 h-4 rounded">
+          <div class="bg-cyan-500 h-4 w-[90%] rounded"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Profile Dropdown Toggle Script -->
+  <script>
+    document.getElementById('profileDropdownToggle').addEventListener('click', () => {
+      const dropdown = document.getElementById('profileDropdown');
+      dropdown.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Whiteboard - Study With Me</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-white min-h-screen">
+
+  <div class="flex">
+
+    <!-- Sidebar -->
+    <div class="w-16 md:w-1/6 bg-cyan-100 min-h-screen p-4 space-y-6 flex flex-col items-center md:items-start">
+      <img src="Study_with_Me-removebg-preview.png" class="w-20 md:w-32 mb-2 md:mb-4" alt="Logo">
+      <nav class="space-y-4 w-full">
+        <a href="home.html" class="flex items-center gap-2 p-2 hover:bg-cyan-200 rounded-md text-gray-800">
+          <span class="material-icons">home</span>
+          <span class="hidden md:inline">Home</span>
+        </a>
+        <a href="profile.html" class="flex items-center gap-2 p-2 hover:bg-cyan-200 rounded-md text-gray-800">
+          <span class="material-icons">dashboard</span>
+          <span class="hidden md:inline">Dashboard</span>
+        </a>
+        <a href="task.html" class="flex items-center gap-2 p-2 hover:bg-cyan-200 rounded-md text-gray-800">
+          <span class="material-icons">assignment</span>
+          <span class="hidden md:inline">Tasks</span>
+        </a>
+        <a href="group.html" class="flex items-center gap-2 p-2 hover:bg-cyan-200 rounded-md text-gray-800">
+          <span class="material-icons">group</span>
+          <span class="hidden md:inline">Groups</span>
+        </a>
+        <a href="msg.html" class="flex items-center gap-2 p-2 hover:bg-cyan-200 rounded-md text-gray-800">
+          <span class="material-icons">chat</span>
+          <span class="hidden md:inline">Message</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Whiteboard Content Area -->
+    <div class="flex-1 relative">
+
+      <!-- Topbar -->
+      <div class="flex justify-between items-center px-6 py-4 bg-cyan-100 shadow-md">
+        <h2 class="text-xl font-bold text-gray-800">WHITE BOARD</h2>
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2">
+           
+            <input type="text" placeholder="Search here..." class="border px-3 py-1 rounded-md" />
+          </div>
+          <div class="relative">
+            <button id="profileButton" class="flex items-center gap-2 focus:outline-none">
+              <img src="clg gurl.jpg" class="w-8 h-8 rounded-full" alt="User">
+              <span class="font-semibold text-black">VIDHYA</span>
+              <span class="material-icons text-black">arrow_drop_down</span>
+            </button>
+            <div id="profileDropdown" class="absolute right-0 mt-2 w-56 bg-cyan-100 shadow-lg rounded-md py-2 hidden z-50">
+  <a href="Profile.html" class="flex items-center px-4 py-2 text-gray-800 hover:bg-cyan-200">
+    <span class="material-icons mr-2">person</span> Profile
+  </a>
+  <a href="changepwd.html" class="flex items-center px-4 py-2 text-gray-800 hover:bg-cyan-200">
+    <span class="material-icons mr-2">lock</span> Change Password
+  </a>
+  <a href="notify.html" class="flex items-center px-4 py-2 text-gray-800 hover:bg-cyan-200">
+    <span class="material-icons mr-2">notifications</span> Notification Settings
+  </a>
+  <a href="delacc.html" class="flex items-center px-4 py-2 text-gray-800 hover:bg-cyan-200">
+    <span class="material-icons mr-2">delete</span> Delete Account
+  </a>
+  <a href="login.html" class="flex items-center px-4 py-2 text-gray-800 hover:bg-cyan-200">
+    <span class="material-icons mr-2">logout</span> Logout
+  </a>
+</div>
+          </div>
+          
+        </div>
+      </div>
+      <!-- Share board button just below top bar -->
+<div class="px-6 py-4">
+  <button class="bg-cyan-300 px-8 py-2 rounded-md font-medium hover:bg-cyan-400 float-right">Share board</button>
+</div>
+
+      <!-- Tools Vertical Toolbar -->
+      <div class="absolute top-36 left-0 bg-white shadow-md rounded-md w-12 py-4 flex flex-col items-center space-y-6">
+        <span class="material-icons cursor-pointer hover:text-cyan-500">filter_alt</span>
+        <span class="material-icons text-cyan-600 bg-cyan-100 p-1 rounded">edit</span>
+        <span class="material-icons cursor-pointer hover:text-cyan-500">title</span>
+        <span class="material-icons cursor-pointer hover:text-cyan-500">crop_square</span>
+        <span class="material-icons cursor-pointer hover:text-cyan-500">grid_on</span>
+        <span class="material-icons cursor-pointer hover:text-cyan-500">expand_more</span>
+      </div>
+
+      <!-- Whiteboard Canvas -->
+      <div class="h-[calc(100vh-72px)] flex items-center justify-center">
+        <div class="text-center">
+          <div class="text-5xl border-2 border-black w-20 h-20 flex items-center justify-center mx-auto mb-2 rounded-md cursor-pointer hover:bg-gray-100">+</div>
+          <p class="text-gray-600 font-medium">Add Your First Object</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Dropdown JS -->
+  <script>
+    const profileBtn = document.getElementById('profileButton');
+    const dropdown = document.getElementById('profileDropdown');
+
+    profileBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdown.classList.toggle('hidden');
+    });
+
+    window.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target) && !profileBtn.contains(e.target)) {
+        dropdown.classList.add('hidden');
+      }
+    });
+  </script>
+  <a href="home.html" class="fixed bottom-4 left-4 bg-cyan-200 hover:bg-cyan-300 text-black p-2 rounded-full shadow-md">
+  <span class="material-icons">arrow_back</span>
+</a>
+
+</body>
+</html>

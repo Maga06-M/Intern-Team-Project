@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile - Study With Me</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-pink-100 min-h-screen flex">
+  <!-- Sidebar -->
+  <aside class="w-16 md:w-1/6 bg-cyan-100 p-4 space-y-6 flex flex-col items-center md:items-start">
+    <img src="Study_with_Me-removebg-preview.png" class="w-20 md:w-32 mb-2 md:mb-4" alt="Logo">
+    <nav class="space-y-4 w-full">
+      <a href="home.html" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+        <span class="material-icons">home</span><span class="hidden md:inline">Home</span>
+      </a>
+      <a href="Dashboard.html" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+        <span class="material-icons">dashboard</span><span class="hidden md:inline">Dashboard</span>
+      </a>
+      <a href="task.html" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+        <span class="material-icons">assignment</span><span class="hidden md:inline">Tasks</span>
+      </a>
+      <a href="group.html" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+        <span class="material-icons">group</span><span class="hidden md:inline">Groups</span>
+      </a>
+      <a href="msg.html" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+        <span class="material-icons">chat</span><span class="hidden md:inline">Message</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Main Section -->
+  <main class="flex-1 p-6">
+    <!-- Top Bar -->
+    <div class="flex justify-between items-center mb-6">
+      
+      <div class="flex items-center bg-white rounded px-3 py-1 w-1/3">
+        <span class="material-icons text-cyan-500">search</span>
+        <input type="text" placeholder="Search here..." class="ml-2 w-full outline-none bg-transparent" />
+      </div>
+      <div class="relative">
+        <button id="profileButton" class="flex items-center gap-2">
+          <img src="clg gurl.jpg" class="w-8 h-8 rounded-full" />
+          <span class="font-semibold text-black">VIDHYA</span>
+          <span class="material-icons text-black">arrow_drop_down</span>
+        </button>
+        <div id="profileDropdown" class="absolute right-0 mt-2 w-56 bg-cyan-100 shadow-lg rounded-md py-2 hidden z-50">
+          <a href="Profile.html" class="flex items-center px-4 py-2 text-gray-800 hover:bg-cyan-200">
+            <span class="material-icons mr-2">person</span> Profile
+          </a>
+          <a href="changepwd.html" class="flex items-center px-4 py-2 text-gray-800 hover:bg-cyan-200">
+            <span class="material-icons mr-2">lock</span> Change Password
+          </a>
+          <a href="notify.html" class="flex items-center px-4 py-2 text-gray-800 hover:bg-cyan-200">
+            <span class="material-icons mr-2">notifications</span> Notification Settings
+          </a>
+          <a href="delacc.html" class="flex items-center px-4 py-2 text-gray-800 hover:bg-cyan-200">
+            <span class="material-icons mr-2">delete</span> Delete Account
+          </a>
+          <a href="login.html" class="flex items-center px-4 py-2 text-gray-800 hover:bg-cyan-200">
+            <span class="material-icons mr-2">logout</span> Logout
+          </a>
+        </div>
+      </div>
+    </div>
+    <h1 class="text-2xl font-bold text-black mb-4">Profile</h1>
+
+    <!-- Profile Section -->
+    <div class="bg-white rounded-lg p-6 shadow-md relative">
+      <div class="flex items-center gap-6">
+        <img src="clg gurl.jpg" class="w-24 h-24 rounded-full" />
+        <div>
+          <h2 class="text-xl font-bold">VIDHYA <span class="text-red-500">🔥</span></h2>
+          <p class="text-gray-700 flex items-center gap-1"><span class="material-icons text-blue-500">school</span> Engineering</p>
+        </div>
+        <button id="editBtn" class="ml-auto bg-cyan-400 hover:bg-yellow-500 px-3 py-1 rounded flex items-center">
+          <span class="material-icons mr-1">edit</span>Edit
+        </button>
+      </div>
+
+      <!-- Form with Subheadings -->
+      <form id="profileForm" class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">First Name</label>
+          <input class="bg-pink-100 p-2 rounded w-full" readonly value="Vidhya" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Last Name</label>
+          <input class="bg-pink-100 p-2 rounded w-full" readonly value="R" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Date of Birth</label>
+          <input class="bg-pink-100 p-2 rounded w-full" readonly type="date" value="2002-06-25" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Mobile Number</label>
+          <input class="bg-pink-100 p-2 rounded w-full" readonly value="8887776665" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">User ID</label>
+          <input class="bg-pink-100 p-2 rounded w-full" readonly value="S24UID001" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Username</label>
+          <input class="bg-pink-100 p-2 rounded w-full" readonly value="VIDHYA" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Email</label>
+          <input class="bg-pink-100 p-2 rounded w-full" readonly value="Vidhya25@gmail.com" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Education</label>
+          <select class="bg-pink-100 p-2 rounded w-full" disabled>
+            <option selected>Engineering</option>
+            <option>Arts</option>
+            <option>Science</option>
+            <option>Medical</option>
+          </select>
+        </div>
+      </form>
+      <button id="saveBtn" class="mt-4 hidden bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">Save</button>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
+      <div class="bg-cyan-100 rounded-lg p-4 shadow-md text-center">
+        <div class="text-3xl">🏆</div>
+        <p class="font-semibold">Overall Rank</p>
+        <p class="text-cyan-700 font-bold text-xl">#1000+</p>
+      </div>
+      <div class="bg-cyan-100 rounded-lg p-4 shadow-md text-center">
+        <div class="text-3xl">🔥</div>
+        <p class="font-semibold">Best Streak</p>
+        <p class="text-cyan-700 font-bold text-xl">5 days</p>
+      </div>
+      <div class="bg-cyan-100 rounded-lg p-4 shadow-md text-center">
+        <div class="text-3xl">🔥</div>
+        <p class="font-semibold">Current Streak</p>
+        <p class="text-cyan-700 font-bold text-xl">5 days</p>
+      </div>
+      <div class="bg-cyan-100 rounded-lg p-4 shadow-md text-center">
+        <div class="text-3xl">🧊</div>
+        <p class="font-semibold">Streak Freezes</p>
+        <p class="text-cyan-700 font-bold text-xl">1 out of 1 left</p>
+      </div>
+    </div>
+
+    <!-- Chart Section -->
+    <div class="bg-cyan-100 p-4 rounded-lg shadow-md mt-6">
+      <div class="flex justify-between items-center mb-2">
+        <p class="text-sm text-gray-600">2 hours spent studying</p>
+        <div class="flex gap-2">
+          <button class="bg-cyan-100 px-2 py-1 rounded text-sm">Chart</button>
+          <select class="bg-cyan-100 px-2 py-1 rounded text-sm">
+            <option>Last Month</option>
+          </select>
+        </div>
+      </div>
+      <img src="date graph.png" class="w-full h-80,h-96 object-contain" alt="Chart" />
+    </div>
+  </main>
+
+  <!-- JS -->
+  <script>
+    const editBtn = document.getElementById('editBtn');
+    const saveBtn = document.getElementById('saveBtn');
+    const formFields = document.querySelectorAll('#profileForm input, #profileForm select');
+    editBtn.addEventListener('click', () => {
+      formFields.forEach(f => {
+        f.removeAttribute('readonly');
+        f.removeAttribute('disabled');
+      });
+      saveBtn.classList.remove('hidden');
+    });
+    saveBtn.addEventListener('click', () => {
+      formFields.forEach(f => {
+        f.setAttribute('readonly', true);
+        f.setAttribute('disabled', true);
+      });
+      saveBtn.classList.add('hidden');
+    });
+
+    document.getElementById("profileButton").addEventListener("click", () => {
+      document.getElementById("profileDropdown").classList.toggle("hidden");
+    });
+  </script>
+  <a href="home.html" class="fixed bottom-4 left-4 bg-cyan-200 hover:bg-cyan-300 text-black p-2 rounded-full shadow-md">
+  <span class="material-icons">arrow_back</span>
+</a>
+</body>
+</html>
