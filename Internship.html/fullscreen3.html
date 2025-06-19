@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pomodoro Full Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-white h-screen w-screen flex items-center justify-center font-sans relative">
+
+  <!-- Top Right Icons -->
+  <div class="absolute top-6 right-6 flex items-center gap-4 z-50">
+    <span class="material-icons text-gray-700 hover:text-blue-600 cursor-pointer text-xl">settings</span>
+    <img src="zoom icon.png" alt="Overview" onclick="window.location.href='longbreak.html'" class="w-6 h-6 cursor-pointer hover:opacity-80" />
+    <a href="home.html" class="text-gray-700 hover:text-red-500 cursor-pointer">
+      <span class="material-icons text-xl">cancel</span>
+    </a>
+  </div>
+
+  <!-- Pomodoro Centered Content -->
+  <div class="w-full h-full flex flex-col items-center justify-center bg-cyan-50">
+
+    <!-- Tabs -->
+    <div class="flex justify-center gap-3 mb-8">
+      <button onclick="window.location.href='fullscreen1.html'"class="bg-white px-5 py-2 rounded-full text-sm font-semibold shadow-md">Pomodoro</button>
+      <button onclick="window.location.href='fullscreen2.html'" class="bg-white px-5 py-2 rounded-full text-sm font-semibold shadow-md">Short break</button>
+      <button  class="bg-cyan-300 px-5 py-2 rounded-full text-sm font-semibold shadow-md">Long break</button>
+    </div>
+
+    <!-- Timer Circle -->
+    <div class="w-[250px] h-[250px] rounded-full border-[12px] border-pink-200 bg-blue-200 flex items-center justify-center mb-8">
+      <span id="countdown" class="text-4xl font-bold text-blue-900">25:00</span>
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-center gap-10 mb-6">
+      <button onclick="togglePauseResume()" class="bg-black text-white w-12 h-12 flex items-center justify-center rounded-full shadow-md hover:scale-110 transition">
+        <span id="pauseIcon" class="material-icons text-lg">play_arrow</span>
+      </button>
+      <button onclick="resetTimer()" class="bg-black text-white w-12 h-12 flex items-center justify-center rounded-full shadow-md hover:scale-110 transition">
+        <span class="material-icons text-lg">replay</span>
+      </button>
+    </div>
+
+    <!-- Time Stats -->
+    <div class="text-base font-medium text-center space-y-2">
+      <p class="text-blue-800">Focus: <span id="focusTime">00:00</span></p>
+      <p class="text-red-700">Break: <span id="breakTime">00:00</span></p>
+    </div>
+
+  </div>
+
+  <!-- Pomodoro Script -->
+  <script>
+    let timeLeft = 15 * 60;
+    let isRunning = false;
+    let focusSeconds = 0;
+    let interval;
+
+    function togglePauseResume() {
+      const icon = document.getElementById("pauseIcon");
+      if (!isRunning) {
+        isRunning = true;
+        icon.textContent = "pause";
+        interval = setInterval(() => {
+          if (timeLeft > 0) {
+            timeLeft--;
+            focusSeconds++;
+            updateDisplay();
+          } else {
+            clearInterval(interval);
+            isRunning = false;
+            icon.textContent = "play_arrow";
+          }
+        }, 1000);
+      } else {
+        clearInterval(interval);
+        isRunning = false;
+        icon.textContent = "play_arrow";
+      }
+    }
+
+    function resetTimer() {
+      clearInterval(interval);
+      isRunning = false;
+      timeLeft = 15 * 60;
+      focusSeconds = 0;
+      document.getElementById("pauseIcon").textContent = "play_arrow";
+      updateDisplay();
+    }
+
+    function updateDisplay() {
+      const min = String(Math.floor(timeLeft / 60)).padStart(2, '0');
+      const sec = String(timeLeft % 60).padStart(2, '0');
+      document.getElementById("countdown").innerText = `${min}:${sec}`;
+
+      const fmin = String(Math.floor(focusSeconds / 60)).padStart(2, '0');
+      const fsec = String(focusSeconds % 60).padStart(2, '0');
+      document.getElementById("focusTime").innerText = `${fmin}:${fsec}`;
+    }
+
+    updateDisplay();
+  </script>
+
+</body>
+</html>

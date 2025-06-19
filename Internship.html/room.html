@@ -1,0 +1,163 @@
+home page        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study With Me - Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-pink-100 to-white min-h-screen relative">
+
+  <!-- Main Layout -->
+  <div class="flex">
+
+    <!-- Sidebar -->
+    <div class="w-16 md:w-1/6 bg-cyan-100 min-h-screen p-4 space-y-6 flex flex-col items-center md:items-start">
+      <img src="Study_with_Me-removebg-preview.png" class="w-20 md:w-32 mb-2 md:mb-4" alt="Logo">
+      <nav class="space-y-4 w-full">
+        <a href="#" class="flex items-center gap-2 p-2 bg-cyan-300 rounded-md text-gray-800">
+          <span class="material-icons">home</span>
+          <span class="hidden md:inline">Home</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+          <span class="material-icons">dashboard</span>
+          <span class="hidden md:inline">Dashboard</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+          <span class="material-icons">assignment</span>
+          <span class="hidden md:inline">Tasks</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+          <span class="material-icons">group</span>
+          <span class="hidden md:inline">Groups</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+          <span class="material-icons">chat</span>
+          <span class="hidden md:inline">Message</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-6">
+      <!-- Top Bar -->
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-2xl sm:text-3xl font-bold text-indigo-900">STAY ON TRACK , NOT ALONE</h1>
+        <div class="flex items-center gap-2">
+          <img src="profile.png" class="w-8 h-8 rounded-full" alt="User">
+          <span class="font-semibold">VIDHYA</span>
+          <span class="material-icons text-gray-600">arrow_drop_down</span>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex gap-4 mb-4">
+        <button class="bg-cyan-300 px-4 py-2 rounded-md font-medium">Create Your Room</button>
+        <button class="bg-cyan-300 px-4 py-2 rounded-md font-medium">Join Feature Rooms</button>
+      </div>
+
+      <!-- Search Filters -->
+      <div class="flex items-center gap-2 mb-6">
+        <button class="bg-cyan-100 px-2 py-1 rounded text-gray-800 hover:bg-cyan-200">All</button>
+        <button class="bg-cyan-100 px-2 py-1 rounded text-gray-800 hover:bg-cyan-200">🔤</button>
+        <button class="bg-cyan-100 px-2 py-1 rounded text-gray-800 hover:bg-cyan-200">👤</button>
+        <input type="text" placeholder="Search here..." class="flex-1 px-3 py-1 border rounded-md" />
+      </div>
+
+      <!-- Cards Section -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="text-center">
+          <div class="bg-cyan-100 h-40 flex items-center justify-center text-4xl rounded-md">+</div>
+          <p class="mt-2 font-semibold">Create Room</p>
+        </div>
+        <div class="text-center">
+          <img src="conference-call.png" class="h-40 w-full object-cover rounded-md" />
+          <p class="mt-2 font-semibold">Study with Friends</p>
+        </div>
+        <div class="text-center">
+          <img src="shared resource.png" class="h-40 w-full object-cover rounded-md" />
+          <p class="mt-2 font-semibold">Share Resources</p>
+        </div>
+        <div class="text-center">
+          <img src="CreatingAWhiteboardZoom.mp4.mp4b86c.jpg" class="h-40 w-full object-cover rounded-md" />
+          <p class="mt-2 font-semibold">Start Whiteboard</p>
+        </div>
+        <div class="text-center">
+          <img src="timer.jpg" class="h-40 w-full object-cover rounded-md" />
+          <p class="mt-2 font-semibold">Launch Focus Timer</p>
+        </div>
+        <div class="text-center">
+          <img src="room history.jpg" class="h-40 w-full object-cover rounded-md" />
+          <p class="mt-2 font-semibold">Room History</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Overlay -->
+  <div class="fixed inset-0 bg-black bg-opacity-20 flex items-center justify-center z-50">
+    <!-- Modal Box -->
+    <div class="relative bg-blue-100 w-[95%] max-w-4xl rounded-2xl p-8 shadow-2xl">
+     <!-- Cancel Button -->
+<a href="home.html" class="absolute top-4 right-4 text-gray-700 hover:text-red-500">
+  <span class="material-icons">cancel</span>
+</a>
+
+
+      <h2 class="text-xl sm:text-2xl font-bold mb-6 text-center">Create Your Room</h2>
+
+      <!-- Input Fields -->
+      <div class="flex flex-col sm:flex-row gap-4 mb-6">
+        <input type="text" placeholder="Enter Room Name" class="flex-1 px-4 py-2 border rounded-lg text-base" />
+        <input type="password" placeholder="Enter Password" class="flex-1 px-4 py-2 border rounded-lg text-base" />
+      </div>
+
+      <!-- Room Content -->
+      <div class="flex flex-col lg:flex-row justify-between gap-8">
+
+        <!-- Features -->
+        <div class="flex-1 flex flex-col space-y-4 text-base">
+          <label class="flex items-center space-x-3">
+            <input type="checkbox" class="h-5 w-5" />
+            <span>Video Call</span>
+          </label>
+          <label class="flex items-center space-x-3">
+            <input type="checkbox" class="h-5 w-5" />
+            <span>Watch YouTube Together</span>
+          </label>
+          <label class="flex items-center space-x-3">
+            <input type="checkbox" class="h-5 w-5" />
+            <span>Locked</span>
+          </label>
+          <label class="flex items-center space-x-3">
+            <input type="checkbox" class="h-5 w-5" />
+            <span>Public</span>
+          </label>
+          <label class="flex items-center space-x-3">
+            <input type="checkbox" class="h-5 w-5" />
+            <span>Only Timer</span>
+          </label>
+        </div>
+
+        <!-- Image Slider -->
+        <div class="flex-1 text-center">
+          <p class="font-semibold mb-3">Room Cover</p>
+          <div class="relative inline-block">
+            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow px-2">◀️</button>
+            <img src="WhatsApp Image 2025-06-18 at 17.26.48_e242cdf9.jpg" class="h-40 w-64 object-cover rounded-lg mx-8" />
+            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow px-2">▶️</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Create Button -->
+      <div class="mt-8 text-center">
+        <button onclick="window.location.href='createroom2.html'" class="bg-cyan-400 hover:bg-cyan-500 px-6 py-3 rounded-xl font-semibold text-white">Create Room</button>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

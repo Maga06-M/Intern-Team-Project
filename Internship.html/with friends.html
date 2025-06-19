@@ -1,0 +1,137 @@
+home page        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study with Friends</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body class="bg-gradient-to-b from-pink-100 to-white min-h-screen">
+
+  <div class="flex flex-col md:flex-row h-screen">
+
+    <!-- Sidebar -->
+    <aside class="w-full md:w-64 bg-cyan-100 flex md:flex-col items-center md:items-start p-4 space-y-4 md:space-y-6 overflow-x-auto md:overflow-visible">
+      <img src="Study_with_Me-removebg-preview.png" class="w-14 md:w-28 mb-4 md:mb-0" alt="Logo">
+      <nav class="flex md:flex-col gap-4 w-full justify-center md:justify-start">
+        <a href="home.html" class="flex items-center gap-2 p-2 bg-cyan-300 rounded-md text-gray-800">
+          <span class="material-icons">home</span>
+          <span class="hidden md:inline">Home</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 p-2 hover:bg-cyan-200 rounded-md text-gray-800">
+          <span class="material-icons">dashboard</span>
+          <span class="hidden md:inline">Dashboard</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 p-2 hover:bg-cyan-200 rounded-md text-gray-800">
+          <span class="material-icons">assignment</span>
+          <span class="hidden md:inline">Tasks</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 p-2 hover:bg-cyan-200 rounded-md text-gray-800">
+          <span class="material-icons">group</span>
+          <span class="hidden md:inline">Groups</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 p-2 hover:bg-cyan-200 rounded-md text-gray-800">
+          <span class="material-icons">chat</span>
+          <span class="hidden md:inline">Message</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col overflow-hidden">
+
+      <!-- Top Bar -->
+      <header class="flex flex-wrap items-center justify-between p-4 border-b border-cyan-300 gap-2">
+        <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-indigo-900">STAY ON TRACK , NOT ALONE</h1>
+        <div class="flex items-center gap-2">
+          <img src="profile.png" class="w-8 h-8 rounded-full" alt="User">
+          <span class="font-semibold">VIDHYA</span>
+          <span class="material-icons">arrow_drop_down</span>
+        </div>
+      </header>
+
+      <!-- Content Area -->
+      <div class="flex flex-1 flex-col lg:flex-row overflow-hidden">
+
+        <!-- Video Grid -->
+        <div class="flex-1 p-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 bg-black overflow-y-auto">
+          <!-- Repeat as needed -->
+          <img src="vc-1.jpeg" class="rounded-md object-cover h-40 sm:h-48 w-full border-4 border-green-400 shadow-lg" alt="Participant 1">
+          <img src="vc-2.jpeg" class="rounded-md object-cover h-40 sm:h-48 w-full border-4 border-green-400 shadow-lg" alt="Participant 2">
+          <img src="vc-3.jpeg" class="rounded-md object-cover h-40 sm:h-48 w-full border-4 border-green-400 shadow-lg" alt="Participant 3">
+          <img src="vc-4.jpeg" class="rounded-md object-cover h-40 sm:h-48 w-full border-4 border-green-400 shadow-lg" alt="Participant 4">
+          <img src="vc-5.jpeg" class="rounded-md object-cover h-40 sm:h-48 w-full border-4 border-green-400 shadow-lg" alt="Participant 5">
+          <img src="vc-6.jpeg" class="rounded-md object-cover h-40 sm:h-48 w-full border-4 border-green-400 shadow-lg" alt="Participant 6">
+          <img src="vc=8.jpeg" class="rounded-md object-cover h-40 sm:h-48 w-full border-4 border-green-400 shadow-lg" alt="Participant 7">
+          <img src="vc-7.jpeg" class="rounded-md object-cover h-40 sm:h-48 w-full border-4 border-green-400 shadow-lg" alt="Participant 8">
+          <div class="col-span-2 sm:col-span-3 lg:col-span-4 flex justify-center">
+            <a href="home.html">
+              <button class="mt-2 px-6 py-2 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-md shadow-md transition-all">
+                End Session
+              </button>
+            </a>
+          </div>
+          
+        </div>
+
+        <!-- Chat Panel -->
+        <aside class="w-full lg:w-80 bg-white border-t lg:border-t-0 lg:border-l border-cyan-200 flex flex-col p-4 space-y-3">
+          <h3 class="text-lg font-bold text-blue-900 mb-2">Chat Box</h3>
+          <div id="chatMessages" class="flex-1 overflow-y-auto border border-gray-200 rounded-md p-3 bg-gray-50 max-h-60 lg:max-h-full">
+            <div class="text-sm bg-cyan-100 p-2 rounded-md w-fit mb-2">Hi! Welcome 👋</div>
+          </div>
+          <form id="chatForm" class="flex gap-2">
+            <input id="messageInput" type="text" placeholder="Type a message..." class="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400" required />
+            <button type="submit" class="bg-cyan-400 text-white px-4 py-2 rounded-md hover:bg-cyan-500">Send</button>
+          </form>
+        </aside>
+      </div>
+
+      <!-- Footer -->
+      <footer class="p-6 w-full">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="aspect-square bg-cyan-100 flex flex-col items-center justify-center rounded-md shadow-md hover:bg-cyan-200 cursor-pointer">
+            <img src="CreatingAWhiteboardZoom.mp4.mp4b86c.jpg" alt="Whiteboard" class="w-12 h-12 mb-2">
+            <span class="text-center text-sm">Create White Board</span>
+          </div>
+          <div class="aspect-square bg-white flex flex-col items-center justify-center rounded-md shadow-md hover:bg-gray-100 cursor-pointer">
+            <img src="shared resource.png" alt="Resources" class="w-12 h-12 mb-2">
+            <span class="text-center text-sm">Share Your Resources</span>
+          </div>
+          <div class="aspect-square bg-cyan-100 flex flex-col items-center justify-center rounded-md shadow-md hover:bg-cyan-200 cursor-pointer">
+            <img src="make chat.jpeg" alt="Chat" class="w-12 h-12 mb-2">
+            <span class="text-center text-sm">Make Chats</span>
+          </div>
+          <div class="aspect-square bg-white border border-blue-400 flex flex-col items-center justify-center rounded-md shadow-sm font-semibold">
+            <img src="timer.jpg" alt="Timer" class="w-12 h-12 mb-2">
+            <span class="text-center text-sm">Timer</span>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- Chat Script -->
+  <script>
+    const chatForm = document.getElementById('chatForm');
+    const messageInput = document.getElementById('messageInput');
+    const chatMessages = document.getElementById('chatMessages');
+
+    chatForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const msg = messageInput.value.trim();
+      if (msg) {
+        const div = document.createElement('div');
+        div.className = 'text-sm bg-cyan-100 p-2 rounded-md w-fit self-end mb-2';
+        div.textContent = msg;
+        chatMessages.appendChild(div);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        messageInput.value = '';
+      }
+    });
+  </script>
+
+</body>
+</html>

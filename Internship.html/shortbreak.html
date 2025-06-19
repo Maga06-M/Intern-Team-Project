@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study With Me - Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-pink-100 to-white min-h-screen relative">
+
+  <!-- Main Layout -->
+  <div class="flex">
+
+    <!-- Sidebar -->
+    <div class="w-16 md:w-1/6 bg-cyan-100 min-h-screen p-4 space-y-6 flex flex-col items-center md:items-start">
+      <img src="Study_with_Me-removebg-preview.png" class="w-20 md:w-32 mb-2 md:mb-4" alt="Logo">
+      <nav class="space-y-4 w-full">
+        <a href="#" class="flex items-center gap-2 p-2 bg-cyan-300 rounded-md text-gray-800">
+          <span class="material-icons">home</span>
+          <span class="hidden md:inline">Home</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+          <span class="material-icons">dashboard</span>
+          <span class="hidden md:inline">Dashboard</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+          <span class="material-icons">assignment</span>
+          <span class="hidden md:inline">Tasks</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+          <span class="material-icons">group</span>
+          <span class="hidden md:inline">Groups</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+          <span class="material-icons">chat</span>
+          <span class="hidden md:inline">Message</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-6 relative z-0">
+      <!-- Top Bar -->
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-3xl font-bold text-indigo-900">STAY ON TRACK , NOT ALONE</h1>
+        <div class="flex items-center gap-2">
+          <img src="profile.png" class="w-8 h-8 rounded-full" alt="User">
+          <span class="font-semibold">VIDHYA</span>
+          <span class="material-icons text-gray-600">arrow_drop_down</span>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex gap-4 mb-4">
+        <button class="bg-cyan-300 px-4 py-2 rounded-md font-medium">Create Your Room</button>
+        <button class="bg-cyan-300 px-4 py-2 rounded-md font-medium">Join Feature Rooms</button>
+      </div>
+
+      <!-- Search Filters -->
+      <div class="flex items-center gap-2 mb-6">
+        <button class="bg-cyan-100 px-2 py-1 rounded text-gray-800 hover:bg-cyan-200">All</button>
+        <button class="bg-cyan-100 px-2 py-1 rounded text-gray-800 hover:bg-cyan-200">🔤</button>
+        <button class="bg-cyan-100 px-2 py-1 rounded text-gray-800 hover:bg-cyan-200">👤</button>
+        <input type="text" placeholder="Search here..." class="flex-1 px-3 py-1 border rounded-md" />
+      </div>
+
+      <!-- Cards Section -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="room.html" class="text-center block">
+          <div class="bg-cyan-100 h-40 flex items-center justify-center text-4xl rounded-md hover:bg-cyan-200 transition">
+            +
+          </div>
+          <p class="mt-2 font-semibold">Create Room</p>
+        </a>
+        <a href="with friends.html" class="block">
+          <div class="text-center cursor-pointer">
+            <img src="conference-call.png" class="h-40 w-full object-cover rounded-md" />
+            <p class="mt-2 font-semibold">Study with Friends</p>
+          </div>
+        </a>
+        <a href="shared with u.html" class="block">
+          <div class="text-center cursor-pointer">
+            <img src="shared resource.png" class="h-40 w-full object-cover rounded-md" />
+            <p class="mt-2 font-semibold">Share Resources</p>
+          </div>
+        </a>
+        <div class="text-center">
+          <img src="CreatingAWhiteboardZoom.mp4.mp4b86c.jpg" class="h-40 w-full object-cover rounded-md" />
+          <p class="mt-2 font-semibold">Start Whiteboard</p>
+        </div>
+        <div class="text-center">
+          <img src="timer.jpg" class="h-40 w-full object-cover rounded-md" />
+          <p class="mt-2 font-semibold">Launch Focus Timer</p>
+        </div>
+        <div class="text-center">
+          <img src="room history.jpg" class="h-40 w-full object-cover rounded-md" />
+          <p class="mt-2 font-semibold">Room History</p>
+        </div>
+      </div>
+    </div>
+  </div>
+ <!-- Pomodoro Overlay Box -->
+ <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-cyan-100 rounded-xl shadow-xl w-[90%] md:w-[50%] lg:w-[35%] p-8 pt-20 z-50 text-center min-h-[500px]">
+<!-- Top Right Icons -->
+<div class="absolute top-4 right-4 flex items-center gap-4">
+  <!-- Settings Icon (Material Icons) -->
+  <span onclick="window.location.href='settings2.html'" class="material-icons text-gray-700 hover:text-blue-600 cursor-pointer text-xl">settings</span>
+  <!-- Overview Icon (image) -->
+  <img src="zoom icon.png"alt="Overview" onclick="window.location.href='fullscreen2.html'"class="w-6 h-6 cursor-pointer hover:opacity-80" />
+  <!-- Cancel Icon -->
+  <a href="home.html" class="text-gray-700 hover:text-red-500 cursor-pointer">
+    <span class="material-icons text-xl">cancel</span>
+  </a>
+</div>
+    <!-- Tabs -->
+    <div class="flex justify-center gap-3 mb-5">
+      <button onclick="window.location.href='Pomodoro.html'"class="bg-white px-4 py-1 rounded-full text-sm font-semibold shadow">Pomodoro</button>
+      <button class="bg-cyan-300 px-4 py-1 rounded-full text-sm font-semibold shadow">Short break</button>
+      <button onclick="window.location.href='longbreak.html'"class="bg-white px-4 py-1 rounded-full text-sm font-semibold shadow">Long break</button>
+    </div>
+
+    <!-- Timer Circle -->
+    <div class="w-40 h-40 mx-auto rounded-full border-[10px] border-pink-200 bg-blue-200 flex items-center justify-center mb-4">
+      <span id="countdown" class="text-2xl font-bold text-blue-900">05:00</span>
+    </div>
+
+    <!-- Controls -->
+    <!-- Controls: Play, Pause/Resume & Reset Buttons -->
+<!-- Controls: Pause/Resume & Reset Buttons Only -->
+<div class="flex justify-center gap-6 mb-4">
+  <!-- Pause/Resume Button -->
+  <button onclick="togglePauseResume()" class="bg-black text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md hover:scale-110 transition">
+    <span id="pauseIcon" class="material-icons text-base">pause</span>
+  </button>
+
+  <!-- Reset Button -->
+  <button onclick="resetTimer()" class="bg-black text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md hover:scale-110 transition">
+    <span class="material-icons text-base">replay</span>
+  </button>
+</div>
+
+
+    <!-- Time Display -->
+    <div class="text-sm font-medium space-y-1">
+      <p class="text-blue-800">Focus: <span id="focusTime">00:00</span></p>
+      <p class="text-red-700">Break: <span id="breakTime">00:00</span></p>
+    </div>
+  </div>
+
+  <!-- Pomodoro Script -->
+  <script>
+  let timeLeft = 5 * 60;
+  let isRunning = false;
+  let focusSeconds = 0;
+  let interval;
+
+  function togglePauseResume() {
+    const icon = document.getElementById("pauseIcon");
+
+    if (!isRunning) {
+      // Resume the timer
+      isRunning = true;
+      icon.textContent = "pause";
+      interval = setInterval(() => {
+        if (timeLeft > 0) {
+          timeLeft--;
+          focusSeconds++;
+          updateDisplay();
+        } else {
+          clearInterval(interval);
+          isRunning = false;
+          icon.textContent = "play_arrow";
+        }
+      }, 1000);
+    } else {
+      // Pause the timer
+      clearInterval(interval);
+      isRunning = false;
+      icon.textContent = "play_arrow";
+    }
+  }
+
+  function resetTimer() {
+    clearInterval(interval);
+    isRunning = false;
+    timeLeft = 5 * 60;
+    focusSeconds = 0;
+    document.getElementById("pauseIcon").textContent = "pause";
+    updateDisplay();
+  }
+
+  function updateDisplay() {
+    const min = String(Math.floor(timeLeft / 60)).padStart(2, '0');
+    const sec = String(timeLeft % 60).padStart(2, '0');
+    document.getElementById("countdown").innerText = `${min}:${sec}`;
+
+    const fmin = String(Math.floor(focusSeconds / 60)).padStart(2, '0');
+    const fsec = String(focusSeconds % 60).padStart(2, '0');
+    document.getElementById("focusTime").innerText = `${fmin}:${fsec}`;
+  }
+
+  updateDisplay();
+</script>
+
+
+
+</body>
+</html>

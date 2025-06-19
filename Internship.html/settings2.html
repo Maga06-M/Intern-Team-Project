@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pomodoro Settings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-cover bg-center min-h-screen flex items-center justify-center relative" style="background-image: url('https://source.unsplash.com/featured/?workspace');">
+
+  <!-- Top Left Logo -->
+  <div class="absolute top-6 left-6 ml-8">
+    <img src="Study_with_Me-removebg-preview.png" alt="Logo" class="w-24">
+  </div>
+
+  <!-- Bottom Left Back Button -->
+  <div class="absolute bottom-6 left-6">
+    <a href="home.html" class="flex items-center gap-2 text-blue-700 font-medium hover:underline">
+      <span class="material-icons">arrow_back</span>
+      Back
+    </a>
+  </div>
+  <!-- Settings Box -->
+  <div class="relative bg-black bg-opacity-80 text-white p-12 rounded-2xl w-full max-w-5xl">
+    <a href="home.html" class="absolute top-4 right-4 text-gray-700 hover:text-red-500">
+  <span class="material-icons">cancel</span></a>
+    <!-- Centered Settings Title -->
+    <h2 class="text-4xl font-bold text-center mb-10">Settings</h2>
+    <div class="grid md:grid-cols-[auto_1fr] gap-10">
+      <!-- Tabs (Left Column) -->
+      <div class="flex flex-col space-y-10 text-gray-400 text-lg">
+        <button class="text-white font-semibold">General</button>
+        <button onclick="window.location.href='settings1.html'" class="hover:text-white">Timers</button>
+        <button onclick="window.location.href='settings1.html'" class="text-white font-semibold">Sounds</button>
+        <nav class="space-y-10 w-full"></nav>
+        <button class="hover:text-white">Account</button>
+      </div>
+
+      <!-- Settings Content (Right Column) -->
+      <div class="space-y-10">
+
+        <!-- Theme selection with dropdown inside box -->
+        <div>
+  <select id="theme" class="w-full bg-gray-800 text-white border border-gray-600 rounded-lg px-6 py-2 text-lg">
+    <option disabled selected>Choose a theme</option>
+    <option>Civils</option>
+    <option>Races</option>
+    <option>Nature</option>
+    <option>Minimalist</option>
+    <option>Space Explorer</option>
+  </select>
+</div>
+        <!-- Toggles -->
+        <div class="space-y-6">
+          <div class="flex items-center justify-between">
+            <span class="text-lg">Show browser notification when timer finishes <span class="text-gray-400 text-sm">(beta)</span></span>
+            <label class="inline-flex items-center cursor-pointer relative">
+              <input type="checkbox" class="sr-only peer" id="notifToggle" onchange="updateToggleColor(this)">
+              <div class="w-14 h-8 bg-red-600 rounded-full peer-focus:outline-none transition-all 
+                          after:content-[''] after:absolute after:top-[2px] after:left-[2px] 
+                          after:bg-white after:border after:rounded-full after:h-6 after:w-6 
+                          after:transition-all peer-checked:after:translate-x-6 peer-checked:bg-green-600">
+              </div>
+            </label>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <span class="text-lg">Show Spotify playlist</span>
+            <label class="inline-flex items-center cursor-pointer relative">
+              <input type="checkbox" class="sr-only peer" id="spotifyToggle" onchange="updateToggleColor(this)">
+              <div class="w-14 h-8 bg-red-600 rounded-full peer-focus:outline-none transition-all 
+                          after:content-[''] after:absolute after:top-[2px] after:left-[2px] 
+                          after:bg-white after:border after:rounded-full after:h-6 after:w-6 
+                          after:transition-all peer-checked:after:translate-x-6 peer-checked:bg-green-600">
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex flex-wrap gap-6 justify-center mt-12">
+          <button class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg rounded-xl font-bold">Reset All</button>
+          <button class="bg-gray-500 hover:bg-gray-600 text-white px-8 py-3 text-lg rounded-xl font-bold">Close</button>
+          <button class="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 text-lg rounded-xl font-bold">Save Changes</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toggle script -->
+  <script>
+    function updateToggleColor(input) {
+      const toggle = input.nextElementSibling;
+      if (input.checked) {
+        toggle.classList.remove("bg-red-600");
+        toggle.classList.add("bg-green-600");
+      } else {
+        toggle.classList.remove("bg-green-600");
+        toggle.classList.add("bg-red-600");
+      }
+    }
+
+    document.querySelectorAll('input[type="checkbox"]').forEach(input => {
+      updateToggleColor(input);
+    });
+  </script>
+
+</body>
+</html>

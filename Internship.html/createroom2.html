@@ -1,0 +1,134 @@
+home page        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study With Me - Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-pink-100 to-white min-h-screen relative">
+
+  <!-- Main Layout -->
+  <div class="flex">
+
+    <!-- Sidebar -->
+    <div class="w-16 md:w-1/6 bg-cyan-100 min-h-screen p-4 space-y-6 flex flex-col items-center md:items-start">
+      <img src="Study_with_Me-removebg-preview.png" class="w-20 md:w-32 mb-2 md:mb-4" alt="Logo">
+      <nav class="space-y-4 w-full">
+        <a href="#" class="flex items-center gap-2 p-2 bg-cyan-300 rounded-md text-gray-800">
+          <span class="material-icons">home</span>
+          <span class="hidden md:inline">Home</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+          <span class="material-icons">dashboard</span>
+          <span class="hidden md:inline">Dashboard</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+          <span class="material-icons">assignment</span>
+          <span class="hidden md:inline">Tasks</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+          <span class="material-icons">group</span>
+          <span class="hidden md:inline">Groups</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 p-2 text-gray-800 hover:bg-cyan-200 rounded-md">
+          <span class="material-icons">chat</span>
+          <span class="hidden md:inline">Message</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-6">
+      <!-- Top Bar -->
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-2xl sm:text-3xl font-bold text-indigo-900">STAY ON TRACK , NOT ALONE</h1>
+        <div class="flex items-center gap-2">
+          <img src="profile.png" class="w-8 h-8 rounded-full" alt="User">
+          <span class="font-semibold">VIDHYA</span>
+          <span class="material-icons text-gray-600">arrow_drop_down</span>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex gap-4 mb-4">
+        <button class="bg-cyan-300 px-4 py-2 rounded-md font-medium">Create Your Room</button>
+        <button class="bg-cyan-300 px-4 py-2 rounded-md font-medium">Join Feature Rooms</button>
+      </div>
+
+      <!-- Search Filters -->
+      <div class="flex items-center gap-2 mb-6">
+        <button class="bg-cyan-100 px-2 py-1 rounded text-gray-800 hover:bg-cyan-200">All</button>
+        <button class="bg-cyan-100 px-2 py-1 rounded text-gray-800 hover:bg-cyan-200">🔤</button>
+        <button class="bg-cyan-100 px-2 py-1 rounded text-gray-800 hover:bg-cyan-200">👤</button>
+        <input type="text" placeholder="Search here..." class="flex-1 px-3 py-1 border rounded-md" />
+      </div>
+
+      <!-- Cards Section -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="text-center">
+          <div class="bg-cyan-100 h-40 flex items-center justify-center text-4xl rounded-md">+</div>
+          <p class="mt-2 font-semibold">Create Room</p>
+        </div>
+        <div class="text-center">
+          <img src="conference-call.png" class="h-40 w-full object-cover rounded-md" />
+          <p class="mt-2 font-semibold">Study with Friends</p>
+        </div>
+        <div class="text-center">
+          <img src="shared resource.png" class="h-40 w-full object-cover rounded-md" />
+          <p class="mt-2 font-semibold">Share Resources</p>
+        </div>
+        <div class="text-center">
+          <img src="CreatingAWhiteboardZoom.mp4.mp4b86c.jpg" class="h-40 w-full object-cover rounded-md" />
+          <p class="mt-2 font-semibold">Start Whiteboard</p>
+        </div>
+        <div class="text-center">
+          <img src="timer.jpg" class="h-40 w-full object-cover rounded-md" />
+          <p class="mt-2 font-semibold">Launch Focus Timer</p>
+        </div>
+        <div class="text-center">
+          <img src="room history.jpg" class="h-40 w-full object-cover rounded-md" />
+          <p class="mt-2 font-semibold">Room History</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Overlay -->
+<div class="fixed inset-0 bg-black bg-opacity-20 flex items-center justify-center z-50">
+  <!-- Modal Box -->
+  <div class="relative bg-[#B5D4E9] w-[95%] max-w-4xl rounded-2xl p-8 shadow-2xl">
+
+    <!-- Cancel Button -->
+    <a href="room.html" class="absolute top-4 right-4 text-gray-700 hover:text-red-500">
+      <span class="material-icons">cancel</span>
+    </a>
+
+    <!-- Heading -->
+    <h2 class="text-xl sm:text-2xl font-bold mb-6 text-center">Select Room Featured Image</h2>
+
+    <!-- Grid of Room Images -->
+    <div class="grid grid-cols-3 sm:grid-cols-4 gap-4 mb-8">
+      <img src="na 16.jpeg" alt="Room 1" class="rounded-lg w-full h-32 object-cover cursor-pointer hover:scale-105 transition" />
+      <img src="na 9.jpeg" alt="Room 2" class="rounded-lg w-full h-32 object-cover cursor-pointer hover:scale-105 transition" />
+      <img src="na 3.jpeg" alt="Room 3" class="rounded-lg w-full h-32 object-cover cursor-pointer hover:scale-105 transition" />
+      <img src="na 4.jpeg" alt="Room 4" class="rounded-lg w-full h-32 object-cover cursor-pointer hover:scale-105 transition" />
+      <img src="na 5.jpg" alt="Room 5" class="rounded-lg w-full h-32 object-cover cursor-pointer hover:scale-105 transition" />
+      <img src="na 13.jpeg" alt="Room 6" class="rounded-lg w-full h-32 object-cover cursor-pointer hover:scale-105 transition" />
+      <img src="na 15.jpeg" alt="Room 7" class="rounded-lg w-full h-32 object-cover cursor-pointer hover:scale-105 transition" />
+      <img src="na 11.jpeg" alt="Room 8" class="rounded-lg w-full h-32 object-cover cursor-pointer hover:scale-105 transition" />
+      <img src="na 7.jpeg" alt="Room 9" class="rounded-lg w-full h-32 object-cover cursor-pointer hover:scale-105 transition" />
+      <img src="na 10.jpeg" alt="Room 10" class="rounded-lg w-full h-32 object-cover cursor-pointer hover:scale-105 transition" />
+      <img src="na 1.jpeg" alt="Room 11" class="rounded-lg w-full h-32 object-cover cursor-pointer hover:scale-105 transition" />
+      <img src="na 6.jpeg" alt="Room 12" class="rounded-lg w-full h-32 object-cover cursor-pointer hover:scale-105 transition" />
+    </div>
+
+    <!-- Create Room Button -->
+    <div class="text-center">
+      <button class="bg-cyan-400 hover:bg-cyan-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition">
+        Create Room
+      </button>
+    </div>
+
+  </div>
+</div>
